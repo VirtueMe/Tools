@@ -1,2 +1,8 @@
 *.swp
 *~
+
+# Don't care about the results folder
+results
+
+# Don't care about any other csv files generated
+*.csv
