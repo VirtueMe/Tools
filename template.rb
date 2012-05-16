@@ -8,16 +8,16 @@ def xmltemplate()
   <text>
     <main>#{main}</main>
     <tie-in>#{tiein}</tie-in>
-    <format />
-    <visible>false</visible>
-    <weight />
-    <available />
-    <priority />
-    <recommendedAge />
-    <url>#{url}</url>
-    <image1>cover.jpg</image1>
   </text>
-  <image2 />
+  <format />
+  <visible>false</visible>
+  <weight />
+  <available />
+  <priority />
+  <recommendedAge />
+  <url>#{url}</url>
+  <image1>cover.jpg</image1>
+  <image2>#{spread}</image2>
   <thumbnail />
   <created>#{date}</created>
   <removed />
@@ -26,6 +26,6 @@ def xmltemplate()
 </product>'
 end
 
-def createxml (sku, title, main, tiein, url, date)
+def createxml (sku, title, main, tiein, url, date, spread)
   eval('"' + xmltemplate() + '"')
 end
