@@ -18,7 +18,7 @@ files = Dir[filesargument];
 hash = readhash
 
 if files.count > 0
-  Dir.mkdir("results") unless Dir.exists("results")
+  Dir.mkdir("results") unless File.exists?("results") && File.directory?("results")
   File.open(outputfile, 'w') do |f|
     f.puts "productid;name;articleid;date created;text;tie-in;filename"
     files.each do |name|
